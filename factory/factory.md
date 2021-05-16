@@ -6,9 +6,6 @@
 정확하고 꼼꼼한 자료는 쉽게 배워 바로 써먹는 디자인 패턴을 확인 하시고
 
 코드는 github.com/infohojin/patterns 을 참고해 주세요.
-
- 
-
  
 
 팩토리 패턴은 생성 패턴 중에서도 가장 기본이 되는 패턴이며 클래스의 객체 생성 처리를 위임합니다.
@@ -28,31 +25,8 @@
 
 객체지향은 클래스를 선언하는 것이 기본입니다. 
 
-<?php
-// 클래스 파일 선언
-class Hello
-{
-    public function greeting()
-    {
-        return "안녕하세요";
-    }
-}
 객체 지향 코드를 실행하기 위해서는 클래스를 통해 객체를 생성해야 합니다. 생성은 new 키워드를 사용합니다.
-
-<?php
-
-// 클래스 파일을 읽어 옵니다.
-include "hello.php";
-
-// 객체를 생성합니다.
-$obj = new Hello;
-
-// 행위 호출
-echo $obj->greeting();
  
-
- 
-
 의존성
  
 
@@ -61,21 +35,6 @@ echo $obj->greeting();
  
 
 객체 내부에서 다른 객체를 생성하면 두 객체 사이엥 의존성이 발생합니다. 즉, 외부에 의해 결합관계가 발생하는 것을 의존성 주입이라고 합니다.
-
- 
-
-<?php
-// 클래스 파일 선언
-class Hello
-{
-    public function greeting()
-    {
-        // return "안녕하세요";
-        // 새로운 객체를 생성합니다.
-        $ko = new Korean;
-        return $ko->text();
-    }
-}
  
 
 어떤 객체를 어떻게 생성 할지에 따라 의존성과 유연성을 결정합니다.
@@ -87,52 +46,10 @@ class Hello
  
 
 의존성 주입
- 
 
- 
-
- 
-
-<?php
-// 클래스 파일 선언
-class Hello
-{
-    // 객체 저장소
-    private $korean;
-
-    public function __construct($obj)
-    {
-        $this->korean = $obj;
-    }
-
-    public function greeting()
-    {
-        // return "안녕하세요";
-        // 복합 객체를 호출합니다.
-        return $this->korean->text();
-    }
-}
- 
 
 의존성 주입은 객체에 또 다른 객체의 정보를 전달하는 것입니다.
 
-<?php
-
-// 클래스 파일을 읽어 옵니다.
-include "hello.php";
-include "korean.php";
-
-// 객체를 생성합니다.
-$korean = new Korean;
-
-// 의존성을 주입합니다.
-$obj = new Hello($korean);
-
-// 행위 호출
-echo $obj->greeting();
-팩토피 패턴의 목적은 의존 관계를 보다 느슨하게 만드는 것입니다.
-
- 
 
 new 키워드로 직접 객체를 생성하는 것은 강력한 결합관계 코드가 됩니다.
 
@@ -154,8 +71,6 @@ new 키워드로 직접 객체를 생성하는 것은 강력한 결합관계 코
 
 - 메서드로 분리  -> 단순 팩토리 패턴 , 정적 팩토리 패턴
 
- 
-
 일반적인 팩토리
 
  
@@ -166,47 +81,6 @@ Factory -> new Korean 객체 생성
 
 Korean 클래스
 
-<?php
-// 클래스 파일 선언
-class Hello
-{
-    public function greeting()
-    {
-        // return "안녕하세요";
-
-        // 새로운 객체를 생성합니다.
-        // $ko = new Korean;
-        // return $ko->text();
-
-        $ko = Factory::getInstance(); // 팩토리 호출
-        return $ko->text();
-    }
-}
-<?php
-/**
- * 팩토리 클래스
- */
-class Factory
-{
-    static public function getInstance()
-    {
-        echo "팩토리:인스턴스를 생성하여 반환합니다.\n";
-        return new Korean();
-    }
-}
-<?php
-
-// 클래스 파일을 읽어 옵니다.
-include "factory.php";
-include "hello.php";
-include "korean.php";
-
-// 객체를 생성합니다.
-$obj = new hello;
-
-// 행위 호출
-echo $obj->greeting();
- 
 
 단순 팩토리
 
@@ -218,29 +92,7 @@ echo $obj->greeting();
 
 따라서, 별도의 팩토리 클래스를 생성하지 않고 자기 자신의 클래스에 객체 생성을 처리할 수 있는 전용 메서드를 추가 하는 것입니다.
 
-<?php
-// 클래스 파일 선언
-class Hello
-{
-    public function greeting()
-    {
-        // return "안녕하세요";
-        
-        // 새로운 객체를 생성합니다.
-        // $ko = new Korean;
-        $ko = self::factory();
-        return $ko->text();
-    }
 
-    /**
-     * 단순 팩토리
-     */
-    public static function factory()
-    {
-        return new Korean;
-    }
-}
- 
 장점과 단점
 장점
 
