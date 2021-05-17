@@ -1,6 +1,8 @@
 # design_pattern_study
 쉽게 배워 바로 써먹는 디자인 패턴 정리
 
+https://codingtalk.tistory.com/category/design%20pattern
+
 # 생성 패턴    
 💡 팩토리 패턴  
 💡 싱글턴 패턴   
