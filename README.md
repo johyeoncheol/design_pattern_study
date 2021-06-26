@@ -32,7 +32,7 @@ https://codingtalk.tistory.com/category/design%20pattern
 💡 프록시 패턴    O    
 
 # 행동 패턴   
-💡 반복자 패턴   
+💡 반복자 패턴    O 
 
 💡 방문자 패턴    
 
