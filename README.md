@@ -34,7 +34,7 @@ https://codingtalk.tistory.com/category/design%20pattern
 # 행동 패턴   
 💡 반복자 패턴    O 
 
-💡 방문자 패턴    
+💡 방문자 패턴   O 
 
 💡 체인 패턴       
 
