@@ -40,7 +40,7 @@ https://codingtalk.tistory.com/category/design%20pattern
 
 💡 감시자 패턴  O    
 
-💡 중재자 패턴     
+💡 중재자 패턴   O    
 
 💡 상태 패턴       
 
