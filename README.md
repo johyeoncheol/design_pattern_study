@@ -38,7 +38,7 @@ https://codingtalk.tistory.com/category/design%20pattern
 
 💡 체인 패턴   O     
 
-💡 감시자 패턴     
+💡 감시자 패턴  O    
 
 💡 중재자 패턴     
 
