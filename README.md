@@ -42,7 +42,7 @@ https://codingtalk.tistory.com/category/design%20pattern
 
 💡 중재자 패턴   O    
 
-💡 상태 패턴       
+💡 상태 패턴     O     
 
 💡 메멘토 패턴       
 
