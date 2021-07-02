@@ -44,7 +44,7 @@ https://codingtalk.tistory.com/category/design%20pattern
 
 💡 상태 패턴     O     
 
-💡 메멘토 패턴       
+💡 메멘토 패턴    O     
 
 💡 템플릿 메서드 패턴    
 
